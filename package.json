@@ -6,9 +6,16 @@
     "start": "next start"
   },
   "dependencies": {
+    "@heroicons/react": "^1.0.3",
+    "better-react-spinkit": "^2.0.4",
+    "firebase": "^8.9.0",
+    "geolib": "^3.3.1",
     "next": "latest",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "react-map-gl": "^6.1.16",
+    "tailwind-scrollbar-hide": "^1.0.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.6",
