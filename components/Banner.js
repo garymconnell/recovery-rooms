@@ -1,8 +1,9 @@
 import Image from "next/image";
+import { PopupButton } from "react-calendly";
 
 const Banner = () => {
   return (
-    <div className=" relative mx-auto h-[600px] w-screen z-0 ">
+    <div className=" relative mx-auto h-[600px] w- z-0 ">
       <div className="absolute w-full h-full  bg-gray-900 z-10">
         {/* Image Container */}
         <Image
@@ -13,7 +14,7 @@ const Banner = () => {
       </div>
 
       {/* Text Container */}
-      <div className="absolute top-1/4 text-center  w-full  text-gray-100 z-50">
+      <div className="absolute top-1/4 text-center w-full text-gray-100 z-50">
         <h1 className="text-lg lg:text-4xl font-bold">Macs Recovery Room</h1>
         <p className="mt-4 text-sm lg:text-lg max-w-md  md:max-w-2xl mx-auto">
           Kells leading  sports recovery service, catering for athletes of all
@@ -21,25 +22,20 @@ const Banner = () => {
           their body, reduce the risk of injury &amp; perform to their maximum
           potential
         </p>
-        <button className="mt-4">
-          <a
-            className=""
-            id="Setmore_button_iframe"
-            href="https://my.setmore.com/bookingpage/970f22ec-ae43-4fa8-816c-288c9d54fb48"
-          >
-            <img
-              border="none"
-              src="https://storage.googleapis.com/full-assets/setmore/images/1.0/Settings/book-now-blue.svg"
-              alt="Book an appointment with Luke Menton using Setmore"
-            />
-          </a>
-        </button>
+        <PopupButton
+          className="bg-blue-500 mt-4 py-2 px-4 rounded-lg font-semibold"
+          pageSettings={{
+            backgroundColor: "ffffff",
+            hideEventTypeDetails: false,
+            hideGdprBanner: true,
+            hideLandingPageDetails: false,
+            primaryColor: "00a2ff",
+            textColor: "4d5055",
+          }}
+          text="Book a Session"
+          url="https://calendly.com/lukementon15/hour-session"
+        />
       </div>
-      <script
-        id="setmore_script"
-        type="text/javascript"
-        src="https://my.setmore.com/webapp/js/src/others/setmore_iframe.js"
-      ></script>
     </div>
   );
 };

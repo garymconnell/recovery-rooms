@@ -18,12 +18,18 @@ export default function Home({ services }) {
 
       <Banner />
 
-      <main className="mx-auto px-8 sm:px-16 max-w-7xl lg:max-w-[1800px]">
+      <main className="mx-auto px-8 max-w-7xl lg:max-w-[1800px]">
         <section>
-          <h2 className="text-4xl font-semibold py-4">Services</h2>
-          <div className="flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3">
-            {services?.map(({ id, img, title }) => (
-              <ServiceCard key={id} img={img} title={title} />
+          <h2 className="text-4xl font-semibold pt-10 pb-2">Services</h2>
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 4xl:grid-cols-4 gap-8 ">
+            {services.map(service => (
+              <ServiceCard
+                key={service.id}
+                img={service.img}
+                title={service.title}
+                price={service.price}
+                packageIncludes={service.PackageIncludes}
+              />
             ))}
           </div>
         </section>
@@ -40,7 +46,10 @@ export default function Home({ services }) {
 }
 
 export async function getServerSideProps(context) {
-  const services = await db.collection("services").get();
+  const services = await db
+    .collection("services")
+    .orderBy("price", "desc")
+    .get();
 
   const docs = services.docs.map(service => ({
     id: service.id,

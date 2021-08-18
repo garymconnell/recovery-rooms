@@ -1,6 +1,7 @@
 import { UserIcon } from "@heroicons/react/outline";
 import { MenuIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/dist/client/router";
+import { PopupButton } from "react-calendly";
 import logo from "../img/logo-gray.png";
 
 const Header = () => {
@@ -20,21 +21,20 @@ const Header = () => {
         <p onClick={() => router.push("/about")} className="cursor-pointer">
           About Macs
         </p>
-        <a
-          className=""
-          id="Setmore_button_iframe"
-          href="https://my.setmore.com/bookingpage/970f22ec-ae43-4fa8-816c-288c9d54fb48"
-        >
-          {" "}
-          Book Now
-        </a>
-      </div>
 
-      <script
-        id="setmore_script"
-        type="text/javascript"
-        src="https://my.setmore.com/webapp/js/src/others/setmore_iframe.js"
-      ></script>
+        <PopupButton
+          pageSettings={{
+            backgroundColor: "ffffff",
+            hideEventTypeDetails: false,
+            hideGdprBanner: true,
+            hideLandingPageDetails: false,
+            primaryColor: "00a2ff",
+            textColor: "4d5055",
+          }}
+          text="Book a Session"
+          url="https://calendly.com/lukementon15/hour-session"
+        />
+      </div>
     </header>
   );
 };
