@@ -1,6 +1,7 @@
 import { PopupButton } from "react-calendly";
 
-const ServiceCard = ({ img, title, price, packageIncludes }) => {
+const ServiceCard = ({ img, title, price, packageIncludes, link }) => {
+  console.log(link);
   return (
     <div className="flex flex-col justify-between items-center m-2 bg-gray-100 rounded-2xl shadow-lg">
       <div className="h-96 w-full">
@@ -35,7 +36,7 @@ const ServiceCard = ({ img, title, price, packageIncludes }) => {
           textColor: "4d5055",
         }}
         text="Book Now"
-        url="https://calendly.com/lukementon15/hour-session"
+        url={link}
       />
     </div>
   );

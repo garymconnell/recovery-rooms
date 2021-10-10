@@ -20,7 +20,7 @@ export default function Home({ services }) {
 
       <main className="mx-auto px-8 max-w-7xl lg:max-w-[1800px]">
         <section>
-          <h2 className="text-4xl font-semibold pt-10 pb-2">Services</h2>
+          <h2 className="text-4xl font-semibold pt-10 pl-2 pb-2">Services</h2>
           <div className="grid md:grid-cols-2 xl:grid-cols-3 4xl:grid-cols-4 gap-8 ">
             {services.map(service => (
               <ServiceCard
@@ -29,6 +29,7 @@ export default function Home({ services }) {
                 title={service.title}
                 price={service.price}
                 packageIncludes={service.PackageIncludes}
+                link={service.link}
               />
             ))}
           </div>

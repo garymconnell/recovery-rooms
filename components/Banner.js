@@ -7,7 +7,7 @@ const Banner = () => {
       <div className="absolute w-full h-full  bg-gray-900 z-10">
         {/* Image Container */}
         <Image
-          src="https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?cs=srgb&dl=pexels-leon-ardho-1552252.jpg&fm=jpg"
+          src="https://images.pexels.com/photos/949131/pexels-photo-949131.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
           layout="fill"
           objectFit="cover"
         />
@@ -15,8 +15,8 @@ const Banner = () => {
 
       {/* Text Container */}
       <div className="absolute top-1/4 text-center w-full text-gray-100 z-50">
-        <h1 className="text-lg lg:text-4xl font-bold">Macs Recovery Room</h1>
-        <p className="mt-4 text-sm lg:text-lg max-w-md  md:max-w-2xl mx-auto">
+        <h1 className="text-2xl lg:text-4xl font-bold">Macs Recovery Room</h1>
+        <p className="mt-4 text-sm lg:text-lg max-w-[300px] sm:max-w-[500px] md:max-w-2xl mx-auto">
           Kells leading  sports recovery service, catering for athletes of all
           levels, amateur to elite, looking to maintain and get the best out of
           their body, reduce the risk of injury &amp; perform to their maximum
@@ -32,8 +32,8 @@ const Banner = () => {
             primaryColor: "00a2ff",
             textColor: "4d5055",
           }}
-          text="Book a Session"
-          url="https://calendly.com/lukementon15/hour-session"
+          text="Book a 60 min Session here or select a different package below"
+          url="https://calendly.com/macsrecoveryroomskells/60-mins-session"
         />
       </div>
     </div>

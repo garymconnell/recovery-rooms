@@ -1,7 +1,6 @@
 import { UserIcon } from "@heroicons/react/outline";
 import { MenuIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/dist/client/router";
-import { PopupButton } from "react-calendly";
 import logo from "../img/logo-gray.png";
 
 const Header = () => {
@@ -11,8 +10,8 @@ const Header = () => {
       <div>
         <img
           onClick={() => router.push("/")}
-          src="https://firebasestorage.googleapis.com/v0/b/gary-recovery-room.appspot.com/o/img%2FMRR%20Logo_1%20Grey%20-1%20(1).png?alt=media&token=d79881d9-d232-4849-aed0-df376e4d39f9"
-          alt=""
+          src="https://firebasestorage.googleapis.com/v0/b/macs-recovery-5a84b.appspot.com/o/img%2FMRR%20Logo_1%20Grey%20-1%20(1).png?alt=media&token=e3398496-bba9-4444-9d4d-44e9bf74c0e7"
+          alt="macs recovery rooms"
           className="h-10 w-20 object-cover cursor-pointer "
         />
       </div>
@@ -21,19 +20,6 @@ const Header = () => {
         <p onClick={() => router.push("/about")} className="cursor-pointer">
           About Macs
         </p>
-
-        <PopupButton
-          pageSettings={{
-            backgroundColor: "ffffff",
-            hideEventTypeDetails: false,
-            hideGdprBanner: true,
-            hideLandingPageDetails: false,
-            primaryColor: "00a2ff",
-            textColor: "4d5055",
-          }}
-          text="Book a Session"
-          url="https://calendly.com/lukementon15/hour-session"
-        />
       </div>
     </header>
   );

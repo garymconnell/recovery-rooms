@@ -29,7 +29,7 @@ const About = () => {
           team,
           email,
           phone,
-          message,
+          to: recipient,
           message: {
             subject: "Macs Recovery Room Form Submission",
             html: `${name} <br/> ${team} <br/> ${email} <br/> ${phone} <br/> ${message}`,
@@ -57,7 +57,7 @@ const About = () => {
           <Circle color="rgb(84,203,144)" size={60} />
         </div>
       ) : (
-        <div className="mt-6 xl:mt-0 px-5 md:px-20 max-w-7xl mx-auto">
+        <div className="mt-6 xl:mt-8 px-5 md:px-20 max-w-7xl mx-auto">
           <h1 className="text-4xl text-center">Macs Recovery Rooms</h1>
 
           {loading && <h1>Loading...</h1>}
